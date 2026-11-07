@@ -1,0 +1,12 @@
+linux-*.tar.xz
+linux-*/
+linux-*/
+linux-*.tar.xz
+build-default/*
+!build-default/.config
+build-tiny/*
+!build-tiny/.config
+initramfs/*.cpio.gz
+initramfs/dev/
+initramfs/init
+src/init
