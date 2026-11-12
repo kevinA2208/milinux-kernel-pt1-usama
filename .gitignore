@@ -10,3 +10,5 @@ initramfs/*.cpio.gz
 initramfs/dev/
 initramfs/init
 src/init
+busybox-*
+rootfs.cpio.gz

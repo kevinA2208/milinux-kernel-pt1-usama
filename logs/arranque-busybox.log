@@ -1,0 +1,41 @@
+c[?7l[2J[0mSeaBIOS (version 1.17.0-debian-1.17.0-1ubuntu1)
+
+
+iPXE (https://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+0EFC8BD0+0EF08BD0 CA00
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...                                                                               
+
+
+Booting from ROM..c[?7l[2J[    0.003000] ..MP-BIOS bug: 8254 timer not connected to IO-APIC
+
+=== Mi Linux 01: espacio de usuario con BusyBox ===
+Kernel: 6.18.62-equipo03 | Procesos: 53
+
+~ # exit
+[    8.680116] Kernel panic - not syncing: Attempted to kill init! exitcode=0x00000000
+[    8.681920] CPU: 0 UID: 0 PID: 1 Comm: sh Not tainted 6.18.62-equipo03 #1 PREEMPT(voluntary) 
+[    8.682167] Hardware name: QEMU Ubuntu 26.04 PC (i440FX + PIIX, 1996), BIOS 1.17.0-debian-1.17.0-1ubuntu1 04/01/2014
+[    8.682519] Call Trace:
+[    8.683283]  <TASK>
+[    8.683594]  dump_stack_lvl+0x4d/0x70
+[    8.684571]  vpanic+0xd1/0x2c0
+[    8.684814]  panic+0x66/0x66
+[    8.684898]  do_exit.cold+0x3c/0x3c
+[    8.684963]  ? tty_release+0x1b7/0x450
+[    8.685030]  do_group_exit+0x28/0xb0
+[    8.685107]  __x64_sys_exit_group+0x13/0x20
+[    8.685231]  x64_sys_call+0x14fa/0x1500
+[    8.685306]  do_syscall_64+0xa4/0x300
+[    8.685424]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[    8.685884] RIP: 0033:0x4f8e58
+[    8.686235] Code: 89 c4 e9 22 8a f0 ff 66 2e 0f 1f 84 00 00 00 00 00 90 f3 0f 1e fa 48 c7 c6 e8 ff ff ff eb 04 0f 1f 00 f4 b8 e7 00 00 00 0f 05 <48> 3d 00 f0 ff ff 76 f0 f7 d8 64 89 06 eb e9 66 0f 1f 84 00 00 00
+[    8.688619] RSP: 002b:00007ffceab088f8 EFLAGS: 00000202 ORIG_RAX: 00000000000000e7
+[    8.692011] RAX: ffffffffffffffda RBX: 000000003dc306d0 RCX: 00000000004f8e58
+[    8.692131] RDX: 000000003dc306d0 RSI: ffffffffffffffe8 RDI: 0000000000000000
+[    8.697731] RBP: 0000000000000004 R08: 0000000000000000 R09: 0000000000000000
+[    8.697851] R10: 0000000000000000 R11: 0000000000000202 R12: 00007ffceab08c04
+[    8.697952] R13: 00007ffceab08cb8 R14: 0000000000000000 R15: 000000000065d520
+[    8.698092]  </TASK>
+[    8.699089] Kernel Offset: 0x2d400000 from 0xffffffff81000000 (relocation range: 0xffffffff80000000-0xffffffffbfffffff)
+[    8.699724] ---[ end Kernel panic - not syncing: Attempted to kill init! exitcode=0x00000000 ]---
+QEMU: Terminated
+

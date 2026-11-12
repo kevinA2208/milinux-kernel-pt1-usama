@@ -1,0 +1,11 @@
+#!/bin/sh
+export PATH=/sbin:/usr/sbin:/bin:/usr/bin
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs devtmpfs /dev
+hostname milinux-01
+echo
+echo "=== Mi Linux 01: espacio de usuario con BusyBox ==="
+echo "Kernel: $(uname -r) | Procesos: $(ls -d /proc/[0-9]* | wc -l)"
+echo
+exec setsid cttyhack sh
